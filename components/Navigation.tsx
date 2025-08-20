@@ -21,11 +21,11 @@ const Navigation = () => {
     { name: 'About', href: '#about' },
     { name: 'Education', href: '#education' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Recommendations', href: '#recommendations' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Certifications', href: '#certifications' },
     { name: 'Contact', href: '#contact' },
-    { name: 'Recommendations', href: '#recommendations' },
   ]
 
   const scrollToSection = (href: string) => {
