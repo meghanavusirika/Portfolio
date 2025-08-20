@@ -48,24 +48,26 @@ export default function Hero() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 260, damping: 20 }}
-            className="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden shadow-2xl bg-gradient-to-br from-primary-400 to-blue-600 flex items-center justify-center"
+            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-8 rounded-full overflow-hidden shadow-2xl bg-gradient-to-br from-primary-400 to-blue-600 flex items-center justify-center"
           >
             <img
-              src="/profile-image.jpg"
+              src={`/profile-image.jpg?t=${Date.now()}`}
               alt="Meghana Vusirika"
-              width={192}
-              height={192}
-              className="w-full h-full object-cover"
-              style={{ 
-                display: 'block',
-                width: '100%',
-                height: '100%'
-              }}
-              onLoad={() => console.log('Profile image loaded successfully')}
+              className="w-full h-full object-cover rounded-full"
+              loading="eager"
+              decoding="async"
               onError={(e) => {
-                console.error('Profile image failed to load:', e);
                 const target = e.target as HTMLImageElement;
                 target.style.display = 'none';
+                // Show initials as fallback
+                const parent = target.parentElement;
+                if (parent) {
+                  parent.innerHTML = `
+                    <div class="w-full h-full flex items-center justify-center text-white text-4xl font-bold">
+                      MV
+                    </div>
+                  `;
+                }
               }}
             />
           </motion.div>
