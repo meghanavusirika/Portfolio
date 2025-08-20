@@ -121,8 +121,9 @@ export default function Hero() {
               Get In Touch
             </Button>
             <Button 
+              variant="outline" 
               size="lg" 
-              className="text-lg px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white border-primary-500 hover:border-primary-600"
+              className="text-lg px-8 py-3 border-2 border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white transition-all duration-200"
               onClick={() => window.open('https://drive.google.com/file/d/19fRegJ8aqdQre3qhqqozz4Ml4znT-CYZ/view?usp=sharing', '_blank')}
             >
               <Download className="mr-2 h-5 w-5" />
