@@ -13,7 +13,7 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-72 h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl animate-bounce-slow"></div>
@@ -69,7 +69,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto"
           >
             Full Stack & AI Developer passionate about building innovative solutions
           </motion.p>
@@ -78,7 +78,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto"
+            className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto"
           >
             Computer Engineering student at University of Waterloo | Specializing in React, Node.js, Python, and AI/ML
           </motion.div>
@@ -102,9 +102,14 @@ const Hero = () => {
               <Mail className="mr-2 h-5 w-5" />
               Get In Touch
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-3">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-lg px-8 py-3 border-2 border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white transition-all duration-200"
+              onClick={() => window.open('https://drive.google.com/file/d/19fRegJ8aqdQre3qhqqozz4Ml4znT-CYZ/view?usp=sharing', '_blank')}
+            >
               <Download className="mr-2 h-5 w-5" />
-              Download Resume
+              View Resume
             </Button>
           </motion.div>
 
@@ -117,7 +122,7 @@ const Hero = () => {
             <motion.button
               onClick={scrollToAbout}
               whileHover={{ y: 5 }}
-              className="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-200"
+              className="text-gray-500 hover:text-primary-600 transition-colors duration-200"
             >
               <ChevronDown className="h-8 w-8 animate-bounce" />
             </motion.button>

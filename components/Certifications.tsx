@@ -53,7 +53,7 @@ const Certifications = () => {
   }
 
   return (
-    <section id="certifications" className="section-padding bg-gray-50 dark:bg-dark-800">
+    <section id="certifications" className="section-padding bg-gray-50">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,7 @@ const Certifications = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Professional <span className="gradient-text">Certifications</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Industry-recognized credentials that validate my expertise and commitment to continuous learning
           </p>
         </motion.div>
@@ -78,7 +78,7 @@ const Certifications = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-dark-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col"
+              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col"
             >
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex items-start justify-between mb-4">
@@ -86,23 +86,23 @@ const Certifications = () => {
                     {cert.icon}
                   </div>
                   <div className="text-right">
-                    <span className="text-sm text-gray-500 dark:text-gray-400">{cert.date}</span>
-                    <div className="text-xs font-medium text-primary-600 dark:text-primary-400 mt-1">
+                    <span className="text-sm text-gray-500">{cert.date}</span>
+                    <div className="text-xs font-medium text-primary-600 mt-1">
                       {cert.credential}
                     </div>
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-200 leading-tight">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-200 leading-tight">
                   {cert.title}
                 </h3>
 
-                <p className="text-lg text-primary-600 dark:text-primary-400 font-semibold mb-4">
+                <p className="text-lg text-primary-600 font-semibold mb-4">
                   {cert.issuer}
                 </p>
 
                 <div className="flex-grow">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
                     <Award className="h-4 w-4 text-primary-600" />
                     Skills Covered
                   </h4>
@@ -119,7 +119,7 @@ const Certifications = () => {
                 </div>
 
                 <div className="flex items-center justify-between pt-4 mt-auto">
-                  <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                  <div className="flex items-center gap-2 text-sm text-gray-500">
                     <Calendar className="h-4 w-4" />
                     <span>Issued {cert.date}</span>
                   </div>
@@ -127,7 +127,7 @@ const Certifications = () => {
                     href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-200"
+                    className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors duration-200"
                   >
                     <ExternalLink className="h-4 w-4" />
                     View Credential
@@ -145,11 +145,11 @@ const Certifications = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-900/20 dark:to-blue-900/20 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+          <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-xl font-semibold mb-4 text-gray-900">
               Commitment to Excellence
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto">
               These certifications represent my dedication to professional development and staying 
               current with industry standards. I'm continuously pursuing new learning opportunities 
               to enhance my skills and expertise.

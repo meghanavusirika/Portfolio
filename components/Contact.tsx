@@ -32,7 +32,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="section-padding bg-gray-50 dark:bg-dark-800">
+    <section id="contact" className="section-padding bg-gray-50">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ const Contact = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Let's <span className="gradient-text">Connect</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             I'm always open to discussing new opportunities, collaborations, and exciting projects
           </p>
         </motion.div>
@@ -58,7 +58,7 @@ const Contact = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8">
                 Get In Touch
               </h3>
               
@@ -76,7 +76,7 @@ const Contact = () => {
                       {contact.icon}
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">
+                      <p className="text-sm font-medium text-gray-500 mb-1">
                         {contact.label}
                       </p>
                       {contact.link ? (
@@ -84,12 +84,12 @@ const Contact = () => {
                           href={contact.link}
                           target={contact.link.startsWith('http') ? "_blank" : undefined}
                           rel={contact.link.startsWith('http') ? "noopener noreferrer" : undefined}
-                          className="text-lg text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+                          className="text-lg text-gray-900 hover:text-primary-600 transition-colors duration-200"
                         >
                           {contact.value}
                         </a>
                       ) : (
-                        <p className="text-lg text-gray-900 dark:text-white">
+                        <p className="text-lg text-gray-900">
                           {contact.value}
                         </p>
                       )}
@@ -106,7 +106,7 @@ const Contact = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8">
                 What I'm Looking For
               </h3>
               
@@ -126,7 +126,7 @@ const Contact = () => {
                     className="flex items-start gap-3"
                   >
                     <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-600 dark:text-gray-300">
+                    <span className="text-gray-600">
                       {item}
                     </span>
                   </motion.div>
@@ -138,11 +138,10 @@ const Contact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
                 viewport={{ once: true }}
-                className="mt-8 p-6 bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-900/20 dark:to-blue-900/20 rounded-2xl"
+                className="mt-8 p-6 bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl"
               >
-                <p className="text-gray-700 dark:text-gray-300 text-center">
-                  Feel free to reach out if you'd like to discuss potential collaborations, 
-                  have questions about my work, or just want to say hello! 👋
+                <p className="text-gray-700 text-center">
+                  Feel free to reach out if you'd like to discuss potential collaborations, co-op opportunities, have questions about my work, or just want to say hello! 👋
                 </p>
               </motion.div>
             </motion.div>

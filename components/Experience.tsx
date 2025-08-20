@@ -39,7 +39,7 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="section-padding bg-white dark:bg-dark-900">
+    <section id="experience" className="section-padding bg-white">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ const Experience = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="gradient-text">Experience</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             My professional journey and hands-on experience in technology
           </p>
         </motion.div>
@@ -64,7 +64,7 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-gray-50 dark:bg-dark-800 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300"
+              className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300"
             >
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="flex-shrink-0">
@@ -76,32 +76,32 @@ const Experience = () => {
                 <div className="flex-1">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <div>
-                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
                         {experience.title}
                       </h3>
-                      <p className="text-lg text-primary-600 dark:text-primary-400 font-semibold mb-2">
+                      <p className="text-lg text-primary-600 font-semibold mb-2">
                         {experience.company}
                       </p>
                     </div>
                     
                     <div className="flex flex-col items-start md:items-end gap-2">
-                      <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+                      <div className="flex items-center gap-2 text-gray-600">
                         <Calendar className="h-4 w-4" />
                         <span className="text-sm">{experience.duration}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+                      <div className="flex items-center gap-2 text-gray-600">
                         <MapPin className="h-4 w-4" />
                         <span className="text-sm">{experience.location}</span>
                       </div>
                     </div>
                   </div>
 
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed">
                     {experience.description}
                   </p>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
                       <Brain className="h-5 w-5 text-primary-600" />
                       Key Achievements
                     </h4>
@@ -116,7 +116,7 @@ const Experience = () => {
                           className="flex items-start gap-3"
                         >
                           <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-600 dark:text-gray-300 text-sm">
+                          <span className="text-gray-600 text-sm">
                             {achievement}
                           </span>
                         </motion.li>
@@ -125,7 +125,7 @@ const Experience = () => {
                   </div>
 
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                    <span className="text-sm font-medium text-gray-700">
                       Technologies:
                     </span>
                     {experience.technologies.map((tech, techIndex) => (
@@ -142,7 +142,7 @@ const Experience = () => {
                     <div className="mt-4">
                       <a
                         href="#"
-                        className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-200"
+                        className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors duration-200"
                       >
                         <ExternalLink className="h-4 w-4" />
                         {experience.projectLink}
@@ -162,14 +162,14 @@ const Experience = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <div className="bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-900/20 dark:to-blue-900/20 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+          <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-xl font-semibold mb-4 text-gray-900">
               Looking Forward
             </h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-600">
               I'm actively seeking opportunities to apply my skills in full-stack development and AI. 
               I'm particularly interested in roles that challenge me to grow while contributing to 
-              meaningful projects that make a real impact.
+              meaningful projects and innovative solutions.
             </p>
           </div>
         </motion.div>

@@ -56,7 +56,7 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="section-padding bg-gray-50 dark:bg-dark-800">
+    <section id="projects" className="section-padding bg-gray-50">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ const Projects = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             A showcase of my technical skills and innovative solutions
           </p>
         </motion.div>
@@ -81,10 +81,10 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-dark-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
             >
               {/* Project Image */}
-              <div className="h-48 bg-gradient-to-br from-primary-100 to-blue-100 dark:from-primary-900/20 dark:to-blue-900/20 flex items-center justify-center overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-primary-100 to-blue-100 flex items-center justify-center overflow-hidden">
                 {project.image ? (
                   <img
                     src={project.image}
@@ -102,22 +102,22 @@ const Projects = () => {
                   />
                 ) : null}
                 {/* Fallback letter display */}
-                <div className={`image-fallback text-4xl font-bold text-primary-600 dark:text-primary-400 ${project.image ? 'hidden' : ''}`}>
+                <div className={`image-fallback text-4xl font-bold text-primary-600 ${project.image ? 'hidden' : ''}`}>
                   {project.title.charAt(0)}
                 </div>
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-200">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-200">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                <p className="text-gray-600 mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
                     <Code className="h-5 w-5 text-primary-600" />
                     Technologies Used
                   </h4>
@@ -135,7 +135,7 @@ const Projects = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-200"
+                    className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors duration-200"
                   >
                     <Github className="h-4 w-4" />
                     View Code
@@ -145,7 +145,7 @@ const Projects = () => {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors duration-200"
+                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
                     >
                       <ExternalLink className="h-4 w-4" />
                       Live Demo
@@ -164,11 +164,11 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-900/20 dark:to-blue-900/20 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+          <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-xl font-semibold mb-4 text-gray-900">
               More Projects Coming Soon
             </h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-600">
               I'm constantly working on new projects and improving existing ones. 
               Check back regularly to see my latest work and innovations!
             </p>

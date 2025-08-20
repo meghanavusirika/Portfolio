@@ -28,7 +28,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="section-padding bg-white dark:bg-dark-900">
+    <section id="about" className="section-padding bg-white">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             I'm a passionate Computer Engineering student at the University of Waterloo, 
             specializing in full-stack development and artificial intelligence. I love creating 
             innovative solutions that make a real impact.
@@ -54,10 +54,10 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h3 className="text-2xl font-bold mb-6 text-gray-900">
               My Journey
             </h3>
-            <div className="space-y-4 text-gray-600 dark:text-gray-300">
+            <div className="space-y-4 text-gray-600">
               <p>
                 I'm currently pursuing my Bachelor of Applied Science in Computer Engineering 
                 at the University of Waterloo, expected to graduate in 2029. My academic journey 
@@ -83,7 +83,7 @@ const About = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-primary-100 to-blue-100 dark:from-primary-900 dark:to-blue-900 rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-primary-100 to-blue-100 rounded-2xl p-8">
               <div className="grid grid-cols-2 gap-6">
                 {features.map((feature, index) => (
                   <motion.div
@@ -94,15 +94,15 @@ const About = () => {
                     viewport={{ once: true }}
                     className="text-center"
                   >
-                    <div className="bg-white dark:bg-dark-800 rounded-xl p-4 mb-3 inline-block">
-                      <div className="text-primary-600 dark:text-primary-400">
+                    <div className="bg-white rounded-xl p-4 mb-3 inline-block">
+                      <div className="text-primary-600">
                         {feature.icon}
                       </div>
                     </div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                    <h4 className="font-semibold text-gray-900 mb-2">
                       {feature.title}
                     </h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                    <p className="text-sm text-gray-600">
                       {feature.description}
                     </p>
                   </motion.div>
@@ -119,11 +119,11 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-900/20 dark:to-blue-900/20 rounded-2xl p-8">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+          <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8">
+            <h3 className="text-xl font-semibold mb-4 text-gray-900">
               What Drives Me
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto">
               I'm passionate about leveraging technology to solve real-world problems. 
               Whether it's building AI-powered applications, creating seamless user experiences, 
               or optimizing backend systems, I'm always excited to learn new technologies 

@@ -69,7 +69,7 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skills" className="section-padding bg-white dark:bg-dark-900">
+    <section id="skills" className="section-padding bg-white">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -81,7 +81,7 @@ const Skills = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Technical <span className="gradient-text">Skills</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             A comprehensive overview of my technical expertise and capabilities
           </p>
         </motion.div>
@@ -94,18 +94,18 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gray-50 dark:bg-dark-800 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group"
+              className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-gradient-to-br from-primary-500 to-blue-600 rounded-lg p-2 text-white group-hover:scale-110 transition-transform duration-200">
                   {category.icon}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                <h3 className="text-lg font-bold text-gray-900">
                   {category.title}
                 </h3>
               </div>
               
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              <p className="text-sm text-gray-600 mb-4">
                 {category.description}
               </p>
 
@@ -139,10 +139,10 @@ const Skills = () => {
           </h3>
           
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-900/20 dark:to-blue-900/20 rounded-2xl p-8">
+            <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8">
               <div className="flex items-center justify-center gap-3 mb-6">
                 <Users className="h-8 w-8 text-primary-600" />
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
+                <h4 className="text-xl font-semibold mb-4 text-gray-900">
                   Professional & Interpersonal Skills
                 </h4>
               </div>
@@ -155,7 +155,7 @@ const Skills = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="bg-white dark:bg-dark-800 px-4 py-2 rounded-full text-gray-700 dark:text-gray-300 font-medium shadow-sm hover:shadow-md transition-shadow duration-200"
+                    className="bg-white px-4 py-2 rounded-full text-gray-700 font-medium shadow-sm hover:shadow-md transition-shadow duration-200"
                   >
                     {skill}
                   </motion.span>
@@ -172,11 +172,11 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-gray-50 to-blue-50 dark:from-dark-800 dark:to-dark-700 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+          <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-xl font-semibold mb-4 text-gray-900">
               Continuous Learning
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto">
               I'm constantly expanding my skill set and staying up-to-date with the latest 
               technologies and industry best practices. My passion for learning drives me to 
               explore new frameworks, tools, and methodologies.

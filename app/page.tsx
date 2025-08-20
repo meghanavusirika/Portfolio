@@ -7,6 +7,7 @@ import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import Certifications from '@/components/Certifications'
 import Contact from '@/components/Contact'
+import Recommendations from '@/components/Recommendations'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <About />
       <Education />
       <Experience />
+      <Recommendations />
       <Projects />
       <Skills />
       <Certifications />
