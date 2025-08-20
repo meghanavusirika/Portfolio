@@ -1,14 +1,29 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ChevronDown, Mail, Download } from 'lucide-react'
+import { ChevronDown, Download, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { useEffect, useState } from 'react'
 
-const Hero = () => {
+export default function Hero() {
+  const [displayText, setDisplayText] = useState('')
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const fullText = "Computer Engineering Student and Software Developer"
+
+  useEffect(() => {
+    if (currentIndex < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(prev => prev + fullText[currentIndex])
+        setCurrentIndex(prev => prev + 1)
+      }, 100)
+      return () => clearTimeout(timeout)
+    }
+  }, [currentIndex, fullText])
+
   const scrollToAbout = () => {
-    const element = document.querySelector('#about')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    const aboutSection = document.getElementById('about')
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
@@ -16,17 +31,17 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl animate-bounce-slow"></div>
-        <div className="absolute top-40 right-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-bounce-slow animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-40 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-bounce-slow animation-delay-4000"></div>
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
       </div>
 
-      <div className="container-max text-center z-10 relative">
+      <div className="container-max relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-center"
         >
           {/* Profile Image */}
           <motion.div
@@ -65,14 +80,17 @@ const Hero = () => {
             <span className="gradient-text">Meghana</span>
           </motion.h1>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto"
           >
-            Full Stack & AI Developer passionate about building innovative solutions
-          </motion.p>
+            <span className="typing-text">
+              {displayText}
+              <span className="inline-block w-0.5 h-8 bg-blue-500 ml-1 animate-pulse"></span>
+            </span>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -103,9 +121,8 @@ const Hero = () => {
               Get In Touch
             </Button>
             <Button 
-              variant="outline" 
               size="lg" 
-              className="text-lg px-8 py-3 border-2 border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white transition-all duration-200"
+              className="text-lg px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white border-primary-500 hover:border-primary-600"
               onClick={() => window.open('https://drive.google.com/file/d/19fRegJ8aqdQre3qhqqozz4Ml4znT-CYZ/view?usp=sharing', '_blank')}
             >
               <Download className="mr-2 h-5 w-5" />
@@ -132,5 +149,3 @@ const Hero = () => {
     </section>
   )
 }
-
-export default Hero
